@@ -64,7 +64,6 @@ export const Button = styled.button`
 width: 342px;
 height: 74px;
 gap: 20px;
-margin-top: 132px;
 border-radius: 14px;
 background: var(--templates-5-color-1, rgba(0, 0, 0, 0.80));
 font-size: 17px;
@@ -84,5 +83,35 @@ justify-content: center;
 
 &:active{
     opacity: 0.5;
+} 
+`
+
+export const User = styled.li`
+margin-top: 20px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+width: 342px;
+height: 58px;
+border: none;
+outline: none;
+border-radius: 14px;
+background: rgba(255, 255, 255, 0.25);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+p{
+padding-left: 25px;
+font-size: 20px;
+font-style: normal;
+font-weight:normal;
+line-height: 28px;
+color: #ffffff;
+
+
 }
+`
+export const Button2 = styled.button`
+    background: none;
+    border: none;
+    cursor: pointer;
 `
