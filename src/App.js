@@ -22,12 +22,15 @@ const App = () => {
 
   const [users, setUsers] = useState([])
   const inputName = useRef()
-  const inputAge = useRef()
+  const inputCpf = useRef()
 
   async function addNewUsers() {
-    const data = await axios("http://localhost:3001/users", { name: inputName.current.value, age: inputAge.current.value });
-    setUsers([...users, { id: Math.random(), name: inputName.current.value, age: inputAge.current.value }])
-    console.log(data)
+    const { data: newUser } = await axios.post("http://localhost:3001/users", {
+      name: inputName.current.value, cpf: inputCpf.current.value
+    });
+    setUsers([...users, newUser])
+    console.log(newUser)
+
   }
 
   function deleteUser(userId) {
@@ -46,19 +49,20 @@ const App = () => {
         <Input ref={inputName} placeholder="Enter your name"></Input>
 
         <InputLabel>CPF</InputLabel>
-        <Input ref={inputAge} placeholder="Enter your CPF"></Input>
+        <Input ref={inputCpf} placeholder="Enter your CPF"></Input>
 
         <Button onClick={addNewUsers}>
           Login<img alt="seta" src={Arrow} ></img>
         </Button>
 
         <ul>
-          {users.map((user) => (
-            <User key={user.id}>
+          {users.map((users) => (
 
-              <p>{user.name}</p> <p> {user.age}</p>
+            <User key={users.id}>
 
-              <Button2 onClick={() => deleteUser(user.id)}>
+              <p>{users.name}</p> <p> {users.cpf}</p>
+
+              <Button2 onClick={() => deleteUser(users.id)}>
 
                 <img alt="Trash" src={Trash}></img>
 
