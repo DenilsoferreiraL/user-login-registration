@@ -18,6 +18,7 @@ import {
 } from "./styles"
 
 
+
 function App() {
 
   const [users, setUsers] = useState([])
@@ -26,11 +27,11 @@ function App() {
 
   async function addNewUsers() {
 
-    const { data: newUser } = await axios.post("http://localhost:3001/users", {
+    const { data: userFile } = await axios.post("http://localhost:3001/users", {
       name: inputName.current.value, cpf: inputCpf.current.value
     });
 
-    setUsers([...users, newUser])
+    setUsers([...users, userFile])
   }
   useEffect(() => {
     async function fetchUsers() {
@@ -41,7 +42,9 @@ function App() {
     fetchUsers()
   }, [])
 
-  function deleteUser(userId) {
+  async function deleteUser(userId) {
+    await axios.delete(`http://localhost:3001/users/${userId}`)
+
     const newUsers = users.filter((user) => user.id !== userId)
 
     setUsers(newUsers)
