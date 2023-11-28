@@ -1,20 +1,18 @@
-import React, { useState, useRef} from "react"
+import React, { useState, useRef } from "react"
 import axios from "axios"
 import People from "../../assets/people.svg"
 import Arrow from "../../assets/arrow.svg"
-
+ 
 
 import {
+  Button,
   Container,
   ContainerItens,
-  Image,
   H1,
-  InputLabel,
+  Image,
   Input,
-  Button,
+  InputLabel
 } from "./styles"
-
-
 
 function App() {
 

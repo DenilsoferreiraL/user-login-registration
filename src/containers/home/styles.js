@@ -64,19 +64,21 @@ margin-bottom: 34px;
 export const Button = styled.button`
 width: 342px;
 height: 74px;
-gap: 20px;
+margin-top: 130px;
 border-radius: 14px;
+gap: 20px;
 background: var(--templates-5-color-1, rgba(0, 0, 0, 0.80));
 font-size: 17px;
 font-style: normal;
 font-weight: bold;
 line-height: 28px;
-color: #FFF;
+color: #ffffff;
 border: none;
 cursor: pointer;
 display: flex;
 align-items: center;
 justify-content: center;
+
 
 &:hover{
     opacity:0.8;
