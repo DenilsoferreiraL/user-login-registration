@@ -77,7 +77,7 @@ box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
 border-radius: 14px;
 outline: none;
 border: none;
-
+margin-bottom: 20px;
 
 p{
     font-size: 24px;
@@ -85,8 +85,12 @@ p{
     font-style: normal;
     font-weight: normal;
     color:#ffffff
+}
 
-    
+button{ 
+    border: none;
+    background:none;
+    cursor: pointer;
 }
 `
 

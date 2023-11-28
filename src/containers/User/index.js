@@ -20,6 +20,7 @@ function Users() {
     async function fetchUsers() {
       const { data: newUsers } = await axios.get("http://localhost:3001/users")
       setUsers(newUsers)
+      console.log(newUsers)
     }
     fetchUsers()
   }, []);
@@ -47,7 +48,7 @@ function Users() {
           ))}
         </ul>
         <Button>
-          <img alt="seta" src={Arrow}/>BACK
+          <img alt="seta" src={Arrow} />BACK
         </Button>
       </ContainerItens>
     </Container>
