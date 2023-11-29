@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react"
 import axios from "axios"
 import People from "../../assets/people.svg"
 import Arrow from "../../assets/arrow.svg"
- 
+
 
 import {
   Button,
@@ -41,10 +41,9 @@ function App() {
         <InputLabel>CPF</InputLabel>
         <Input ref={inputCpf} placeholder="Enter your CPF"></Input>
 
-        <Button onClick={addNewUsers}>
+       <Button to="/users" onClick={addNewUsers}>
           Login<img alt="seta" src={Arrow} ></img>
         </Button>
-
 
       </ContainerItens>
     </Container>)

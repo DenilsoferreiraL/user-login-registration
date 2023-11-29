@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 import Background from "../../assets/background2.svg"
 
 
@@ -36,7 +37,7 @@ line-height: normal;
 margin-bottom: 80px;
 `
 
-export const Button = styled.button`
+export const Button = styled(Link)`
 width: 342px;
 height: 74px;
 margin-top: 130px;
@@ -53,6 +54,7 @@ cursor: pointer;
 display: flex;
 align-items: center;
 justify-content: center;
+
 
 img{
     transform: rotate(180deg);

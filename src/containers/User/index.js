@@ -47,7 +47,7 @@ function Users() {
             </User>
           ))}
         </ul>
-        <Button>
+        <Button to="/">
           <img alt="seta" src={Arrow} />BACK
         </Button>
       </ContainerItens>
