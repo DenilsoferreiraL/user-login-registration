@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react"
+import { useHistory } from "react-router-dom"
 import axios from "axios"
 import People from "../../assets/people.svg"
 import Arrow from "../../assets/arrow.svg"
@@ -17,6 +18,7 @@ import {
 function App() {
 
   const [users, setUsers] = useState([])
+  const history = useHistory()
   const inputName = useRef()
   const inputCpf = useRef()
 
@@ -27,6 +29,9 @@ function App() {
     });
 
     setUsers([...users, newUser])
+
+    history.push("/users")
+
   }
 
   return (
@@ -41,7 +46,7 @@ function App() {
         <InputLabel>CPF</InputLabel>
         <Input ref={inputCpf} placeholder="Enter your CPF"></Input>
 
-       <Button to="/users" onClick={addNewUsers}>
+        <Button onClick={addNewUsers}>
           Login<img alt="seta" src={Arrow} ></img>
         </Button>
 

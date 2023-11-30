@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { useHistory } from "react-router-dom"
 import axios from "axios"
 import avatar from "../../assets/avatar.svg"
 import Arrow from "../../assets/arrow.svg"
@@ -16,6 +17,7 @@ import {
 function Users() {
 
   const [users, setUsers] = useState([])
+  const history = useHistory()
   useEffect(() => {
     async function fetchUsers() {
       const { data: newUsers } = await axios.get("http://localhost:3001/users")
@@ -25,10 +27,15 @@ function Users() {
   }, []);
 
   async function deleteUser(userId) {
-    await axios.delete(`http:localhost:3001/users/${userId}`)
+    console.log(userId)
+    await axios.delete(`http://localhost:3001/users/${userId}`)
 
     const newUsers = users.filter((user) => user.id !== userId)
+
     setUsers(newUsers)
+  }
+  function backPageHome() {
+    history.push("/")
   }
 
   return (
@@ -47,7 +54,7 @@ function Users() {
             </User>
           ))}
         </ul>
-        <Button to="/">
+        <Button onClick={backPageHome}>
           <img alt="seta" src={Arrow} />BACK
         </Button>
       </ContainerItens>
