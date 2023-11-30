@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { useHistory } from "react-router-dom"
+import { Navigate, useNavigate } from "react-router-dom"
 import axios from "axios"
 import avatar from "../../assets/avatar.svg"
 import Arrow from "../../assets/arrow.svg"
@@ -17,7 +17,7 @@ import {
 function Users() {
 
   const [users, setUsers] = useState([])
-  const history = useHistory()
+  const navigate = useNavigate()
   useEffect(() => {
     async function fetchUsers() {
       const { data: newUsers } = await axios.get("http://localhost:3001/users")
@@ -35,7 +35,7 @@ function Users() {
     setUsers(newUsers)
   }
   function backPageHome() {
-    history.push("/")
+    navigate("/")
   }
 
   return (

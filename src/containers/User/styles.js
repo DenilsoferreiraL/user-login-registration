@@ -9,10 +9,12 @@ display: flex;
 flex-direction: column;
 align-items: center;
 gap: 40px;
-height: 100vh;
+height: 100%;
+min-height: 100vh;
 `
 export const ContainerItens = styled.div`
-height: 100vh;
+height: 100%;
+min-height: calc(100vh - 170px);
 display: flex;
 flex-direction: column;
 border-radius: 61px 61px 0px 0px;
@@ -39,7 +41,7 @@ margin-bottom: 80px;
 export const Button = styled.button`
 width: 342px;
 height: 74px;
-margin-top: 130px;
+margin-top: 15px;
 border-radius: 14px;
 gap: 20px;
 background:transparent;
