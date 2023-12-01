@@ -25,15 +25,7 @@ padding: 50px 36px;
 export const Image = styled.img`
 margin-top: 30px;
 `
-export const H1 = styled.h1`
-color: #FFF;
-text-align: center;
-font-size: 25px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin-bottom: 80px;
-`
+
 export const InputLabel = styled.p`
 color: #eeeeee;
 font-weight: bold;
@@ -64,7 +56,7 @@ margin-bottom: 34px;
 export const Button = styled.button`
 width: 342px;
 height: 74px;
-margin-top: 130px;
+margin-top: 90px;
 border-radius: 14px;
 gap: 20px;
 background: var(--templates-5-color-1, rgba(0, 0, 0, 0.80));

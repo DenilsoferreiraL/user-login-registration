@@ -28,16 +28,6 @@ backdrop-filter: blur(45px);
 export const Image = styled.img`
 margin-top: 30px;
 `
-export const H1 = styled.h1`
-color: #FFF;
-text-align: center;
-font-size: 25px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin-bottom: 80px;
-`
-
 export const Button = styled.button`
 width: 342px;
 height: 74px;

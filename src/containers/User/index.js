@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react"
-import { Navigate, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import avatar from "../../assets/avatar.svg"
 import Arrow from "../../assets/arrow.svg"
 import Trash from "../../assets/trash.svg"
+import H1 from "../../components/Title"
 
 import {
   Container,
   ContainerItens,
-  H1,
   Image,
   Button,
   User,
