@@ -80,7 +80,6 @@ align-items: center;
 justify-content: center;
 
 
-
 &:hover{
     opacity:0.8;
 }
@@ -89,4 +88,10 @@ justify-content: center;
     opacity: 0.5;
 } 
 `
+export const ErrorParagraph = styled.p`
+display: flex;
+justify-content: center;
+font-size: 18px;
+color: #ffffff;
 
+` 
