@@ -15,37 +15,7 @@ min-height: 100vh;
 export const Image = styled.img`
 margin-top: 30px;
 `
-export const Button = styled.button`
-width: 342px;
-height: 74px;
-margin-top: 15px;
-border-radius: 14px;
-gap: 20px;
-background:transparent;
-font-size: 17px;
-font-style: normal;
-font-weight: bold;
-line-height: 28px;
-color: #ffffff;
-border:1px solid;
-cursor: pointer;
-display: flex;
-align-items: center;
-justify-content: center;
 
-
-img{
-    transform: rotate(180deg);
-}
-
-&:hover{
-    opacity:0.8;
-}
-
-&:active{
-    opacity: 0.5;
-} 
-`
 export const User = styled.li`
 display: flex;
 justify-content: space-around;
